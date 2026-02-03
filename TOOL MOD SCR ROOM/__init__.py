@@ -35,6 +35,7 @@ from . import scr_parser
 from . import import_scr
 from . import export_scr
 from . import ui
+from . import operators
 
 # ============================================================================
 # OPERATOR: IMPORT
@@ -161,6 +162,7 @@ classes = (
     IMPORT_OT_scr,
     EXPORT_OT_scr,
     ui.SCR_TOOLS_PT_panel,
+    operators.SCR_OT_validate_mesh,
 )
 
 def register():
@@ -173,6 +175,9 @@ def register():
     for cls in classes:
         print(f"  ✓ Registering {cls.__name__}")
         bpy.utils.register_class(cls)
+    
+    # Register properties
+    ui.register_properties()
     
     # Tambah ke menu
     bpy.types.TOPBAR_MT_file_import.append(menu_func_import)
@@ -187,6 +192,9 @@ def unregister():
     print("\n" + "="*70)
     print("[SCR TOOLS] UNREGISTERING ADDON")
     print("="*70)
+    
+    # Unregister properties
+    ui.unregister_properties()
     
     # Hapus dari menu
     bpy.types.TOPBAR_MT_file_import.remove(menu_func_import)
@@ -204,3 +212,4 @@ def unregister():
 # Entry point (required by Python)
 if __name__ == "__main__":
     register()
+    

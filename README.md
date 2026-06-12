@@ -1,8 +1,7 @@
 # SCR-Tool-godhand
 TOOL MOD SCR ROOM
-# Hi there, I'm [Nama Kamu]! 👋
 
-### [Peran/Profesi Kamu, misal: Full-Stack Developer | Cloud Enthusiast | UI/UX Designer]
+### UI/UX Designer
 
 <p align="left">
   <a href="https://linkedin.com/in/[username-linkedin]"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
